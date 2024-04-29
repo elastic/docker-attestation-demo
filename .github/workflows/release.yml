@@ -90,6 +90,6 @@ jobs:
       - name: Attest image
         uses: github-early-access/generate-build-provenance@main
         with:
-          subject-name: ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_TOKEN }}/${{ github.event.repository.name }}
+          subject-name: ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
           subject-digest: ${{ steps.docker-push.outputs.digest }}
           push-to-registry: true
